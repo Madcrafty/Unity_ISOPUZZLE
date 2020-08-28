@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -39,6 +40,25 @@ public class PlayerController : MonoBehaviour
         if (CC.isGrounded == false)
         {
             CC.Move(Vector3.down);
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Exited");
+        if (other.gameObject.tag == "Respawn")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (other.gameObject.tag == "Platform")
+        {
+            transform.parent = null;
+        }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Platform")
+        {
+            transform.parent = other.transform;
         }
     }
 }
