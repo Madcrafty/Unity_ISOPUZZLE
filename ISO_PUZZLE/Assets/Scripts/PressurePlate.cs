@@ -12,7 +12,7 @@ public class PressurePlate : MonoBehaviour
     public PressurePlateEvent onActivate;
     public PressurePlateEvent onDeactivate;
 
-    private bool pressed;
+    private bool pressed = false;
     private Collider bc;
     // Start is called before the first frame update
     void Start()
