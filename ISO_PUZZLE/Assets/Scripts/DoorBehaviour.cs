@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
-    Vector3 startPos;
-    public int num_pressurePlates;
-
+    private Vector3 startPos;
+    private int num_pressurePlates;
     private int pressed = 0;
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
+        GameObject[] pressurePlates = GameObject.FindGameObjectsWithTag("PressurePlate");
+
+        foreach (GameObject Plate in pressurePlates)
+        {
+            num_pressurePlates++;
+        }
     }
 
     // Update is called once per frame
