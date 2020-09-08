@@ -9,6 +9,21 @@ public class MenuActions : MonoBehaviour
     public bool pause_menu = false;
 
     private GameObject activeMenu;
+    private PlayerActions Controles;
+    private void Awake()
+    {
+        Controles = new PlayerActions();
+    }
+
+    private void OnEnable()
+    {
+        Controles.Enable();
+    }
+
+    private void OnDisable()
+    {
+        Controles.Disable();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +35,8 @@ public class MenuActions : MonoBehaviour
     {
         if (pause_menu)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            float p_Input = Controles.Default.Pause.ReadValue<float>();
+            if (p_Input > 0)
             {
                 Toggle();
             }

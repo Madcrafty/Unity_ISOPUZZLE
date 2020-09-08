@@ -18,6 +18,21 @@ public class CameraControle : MonoBehaviour
     private Camera cam;
     private float defaultSize;
     private float activeSize;
+    private PlayerActions Controles;
+    private void Awake()
+    {
+        Controles = new PlayerActions();
+    }
+
+    private void OnEnable()
+    {
+        Controles.Enable();
+    }
+
+    private void OnDisable()
+    {
+        Controles.Disable();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +46,8 @@ public class CameraControle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.M))
+        float m_Input = Controles.Default.Birdseye_View.ReadValue<float>();
+        if (m_Input > 0)
         {
             TargetPos = VantagePoint.transform.position;
             activeSize = VantageSize;

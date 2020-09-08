@@ -7,7 +7,23 @@ public class PlayerController : MonoBehaviour
 {
     public int moveSpeed = 1;
 
+    private PlayerActions Controles;
     private CharacterController CC;
+
+    private void Awake()
+    {
+        Controles = new PlayerActions();
+    }
+
+    private void OnEnable()
+    {
+        Controles.Enable();
+    }
+
+    private void OnDisable()
+    {
+        Controles.Disable();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -21,19 +37,24 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        //Read movement
+        float h_Input = Controles.Default.Horizontal.ReadValue<float>();
+        float v_Input = Controles.Default.Vertical.ReadValue<float>();
+        //Move Player
+
+        if (h_Input > 0)
         {
             CC.Move(Vector3.right);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (h_Input < 0)
         {
             CC.Move(Vector3.left);
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (v_Input > 0)
         {
             CC.Move(Vector3.forward);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (v_Input < 0)
         {
             CC.Move(Vector3.back);
         }
@@ -41,6 +62,27 @@ public class PlayerController : MonoBehaviour
         {
             CC.Move(Vector3.down);
         }
+
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    CC.Move(Vector3.right);
+        //}
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    CC.Move(Vector3.left);
+        //}
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    CC.Move(Vector3.forward);
+        //}
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    CC.Move(Vector3.back);
+        //}
+        //if (CC.isGrounded == false)
+        //{
+        //    CC.Move(Vector3.down);
+        //}
     }
     public void OnTriggerExit(Collider other)
     {
