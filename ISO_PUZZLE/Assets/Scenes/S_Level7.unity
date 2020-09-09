@@ -2188,7 +2188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad27c405c4eea24caff55489560e186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 698736551}
+  Target: {fileID: 698736551}
   VantagePoint: {fileID: 1031083933}
   VantageSize: 10
   Offset: {x: 0, y: 5, z: -5}
@@ -2228,7 +2228,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.111111
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2252,7 +2252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531428916}
   m_LocalRotation: {x: 0.29240465, y: -0, z: -0, w: 0.9562947}
-  m_LocalPosition: {x: -2.5, y: 4, z: -6.5}
+  m_LocalPosition: {x: -2.4369876, y: 4.09039, z: -6.6029925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

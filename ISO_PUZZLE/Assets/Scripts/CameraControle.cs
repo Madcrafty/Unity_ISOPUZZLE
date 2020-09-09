@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CameraControle : MonoBehaviour
 {
-    public GameObject target;
+    public GameObject Target;
     public GameObject VantagePoint;
     public float VantageSize = 10;
     public Vector3 Offset;
@@ -19,6 +19,7 @@ public class CameraControle : MonoBehaviour
     private float defaultSize;
     private float activeSize;
     private PlayerActions Controles;
+    private bool toogle = true;
     private void Awake()
     {
         Controles = new PlayerActions();
@@ -34,14 +35,12 @@ public class CameraControle : MonoBehaviour
 
     private void Birdseye_View_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        TargetPos = target.transform.position + Offset;
-        activeSize = defaultSize;
+        toogle = true;
     }
 
     private void Birdseye_View_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        TargetPos = VantagePoint.transform.position;
-        activeSize = VantageSize;
+        toogle = false;
     }
 
     private void OnDisable()
@@ -49,7 +48,7 @@ public class CameraControle : MonoBehaviour
         Controles.Default.Birdseye_View.performed -= Birdseye_View_performed;
         Controles.Default.Birdseye_View.canceled -= Birdseye_View_canceled;
         Controles.Default.Birdseye_View.Disable();
-        Controles.Disable();
+        //Controles.Disable();
     }
     // Start is called before the first frame update
     void Start()
@@ -65,16 +64,16 @@ public class CameraControle : MonoBehaviour
     void Update()
     {
         //float m_Input = Controles.Default.Birdseye_View.ReadValue<float>();
-        //if (m_Input > 0)
-        //{
-        //    TargetPos = VantagePoint.transform.position;
-        //    activeSize = VantageSize;
-        //}
-        //else
-        //{
-        //    TargetPos = target.transform.position + Offset;
-        //    activeSize = defaultSize;
-        //}
+        if (!toogle)
+        {
+            TargetPos = VantagePoint.transform.position;
+            activeSize = VantageSize;
+        }
+        else
+        {
+            TargetPos = Target.transform.position + Offset;
+            activeSize = defaultSize;
+        }
 
         if (lastTargetPos != TargetPos)
         {
