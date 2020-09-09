@@ -17,12 +17,24 @@ public class MenuActions : MonoBehaviour
 
     private void OnEnable()
     {
-        Controles.Enable();
+        Controles.Default.Pause.performed += Pause_performed;
+        Controles.Default.Pause.Enable();
+        //Controles.Enable();
+    }
+
+    private void Pause_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        if (pause_menu)
+        {
+            Toggle();
+        }
     }
 
     private void OnDisable()
     {
-        Controles.Disable();
+        Controles.Default.Pause.performed -= Pause_performed;
+        Controles.Default.Pause.Disable();
+        //Controles.Disable();
     }
     // Start is called before the first frame update
     void Start()
@@ -33,14 +45,14 @@ public class MenuActions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pause_menu)
-        {
-            float p_Input = Controles.Default.Pause.ReadValue<float>();
-            if (p_Input > 0)
-            {
-                Toggle();
-            }
-        }
+        //if (pause_menu)
+        //{
+        //    float p_Input = Controles.Default.Pause.ReadValue<float>();
+        //    if (p_Input > 0)
+        //    {
+        //        Toggle();
+        //    }
+        //}
     }
     public void Toggle()
     {

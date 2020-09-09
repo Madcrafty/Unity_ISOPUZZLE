@@ -26,11 +26,29 @@ public class CameraControle : MonoBehaviour
 
     private void OnEnable()
     {
-        Controles.Enable();
+        Controles.Default.Birdseye_View.performed += Birdseye_View_performed;
+        Controles.Default.Birdseye_View.canceled += Birdseye_View_canceled;
+        Controles.Default.Birdseye_View.Enable();
+        //Controles.Enable();
+    }
+
+    private void Birdseye_View_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        TargetPos = target.transform.position + Offset;
+        activeSize = defaultSize;
+    }
+
+    private void Birdseye_View_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        TargetPos = VantagePoint.transform.position;
+        activeSize = VantageSize;
     }
 
     private void OnDisable()
     {
+        Controles.Default.Birdseye_View.performed -= Birdseye_View_performed;
+        Controles.Default.Birdseye_View.canceled -= Birdseye_View_canceled;
+        Controles.Default.Birdseye_View.Disable();
         Controles.Disable();
     }
     // Start is called before the first frame update
@@ -46,17 +64,17 @@ public class CameraControle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float m_Input = Controles.Default.Birdseye_View.ReadValue<float>();
-        if (m_Input > 0)
-        {
-            TargetPos = VantagePoint.transform.position;
-            activeSize = VantageSize;
-        }
-        else
-        {
-            TargetPos = target.transform.position + Offset;
-            activeSize = defaultSize;
-        }
+        //float m_Input = Controles.Default.Birdseye_View.ReadValue<float>();
+        //if (m_Input > 0)
+        //{
+        //    TargetPos = VantagePoint.transform.position;
+        //    activeSize = VantageSize;
+        //}
+        //else
+        //{
+        //    TargetPos = target.transform.position + Offset;
+        //    activeSize = defaultSize;
+        //}
 
         if (lastTargetPos != TargetPos)
         {

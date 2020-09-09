@@ -19,22 +19,6 @@ public class @PlayerActions : IInputActionCollection, IDisposable
             ""id"": ""c39ffe7c-bacb-470b-a8ff-21cd06ffbc7d"",
             ""actions"": [
                 {
-                    ""name"": ""Horizontal"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""ffe4a419-99ab-4393-8843-731da74ab9c8"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Tap""
-                },
-                {
-                    ""name"": ""Vertical"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""f972f659-26e2-418f-ace8-b1c7b7829d30"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Tap""
-                },
-                {
                     ""name"": ""Birdseye_View"",
                     ""type"": ""PassThrough"",
                     ""id"": ""51df47ea-a7bc-4dc8-bb4b-fd2fc10e1023"",
@@ -49,42 +33,41 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Tap""
+                },
+                {
+                    ""name"": ""Up"",
+                    ""type"": ""Button"",
+                    ""id"": ""505e4967-9321-4a9c-9083-8dc0511f152c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
+                },
+                {
+                    ""name"": ""Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""ed530042-58c9-4f03-8d9e-cf01ef552500"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
+                },
+                {
+                    ""name"": ""Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""692421ee-b257-43d8-b3ab-8367d6e6f21d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
+                },
+                {
+                    ""name"": ""Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""17554dd8-d904-4210-8f5b-102d476f1609"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": ""Horizontal"",
-                    ""id"": ""5962252d-99cb-47b8-af2b-eaa9a4997692"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""31300ff8-9f1d-4649-8a36-747e9f4a9236"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""1c0370c1-2c89-4715-90d9-ce031079698c"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
                 {
                     ""name"": """",
                     ""id"": ""adc35810-c6b0-4ff3-858a-aee0a74e1b57"",
@@ -97,37 +80,15 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Vertical"",
-                    ""id"": ""1fa9e2c8-aa61-4f4a-ac7c-1eecea431111"",
-                    ""path"": ""1DAxis"",
+                    ""name"": """",
+                    ""id"": ""18e1407b-04a3-428b-a0ef-a4b303b283c7"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Vertical"",
-                    ""isComposite"": true,
+                    ""action"": ""Birdseye_View"",
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""1b33339d-b2ad-41ac-9106-453d7fac13f2"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Vertical"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""ea06d648-eca2-43b6-b353-3c5cc9720cd4"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Vertical"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -139,6 +100,105 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""094798e8-fb52-43e4-a316-91883437fa9e"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2649b139-504b-482a-bc6f-99d87476459a"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d4d896c-a83a-43bd-8635-07f4fd09a009"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ffb2bd2-f032-49a3-ab9a-987fbb312ac6"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c03d662-4d89-4865-ac7e-befafc0078e7"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""955fb259-afc1-4ca2-b7ac-e9d7419ba5ad"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9bec312a-23c2-4ad8-b5b9-ba46e5644908"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""601b739b-b99a-497e-8b2a-c53a62fe4a10"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9cc4eaa7-c458-4447-a1bd-5bf695ad5f4c"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -147,10 +207,12 @@ public class @PlayerActions : IInputActionCollection, IDisposable
 }");
         // Default
         m_Default = asset.FindActionMap("Default", throwIfNotFound: true);
-        m_Default_Horizontal = m_Default.FindAction("Horizontal", throwIfNotFound: true);
-        m_Default_Vertical = m_Default.FindAction("Vertical", throwIfNotFound: true);
         m_Default_Birdseye_View = m_Default.FindAction("Birdseye_View", throwIfNotFound: true);
         m_Default_Pause = m_Default.FindAction("Pause", throwIfNotFound: true);
+        m_Default_Up = m_Default.FindAction("Up", throwIfNotFound: true);
+        m_Default_Down = m_Default.FindAction("Down", throwIfNotFound: true);
+        m_Default_Left = m_Default.FindAction("Left", throwIfNotFound: true);
+        m_Default_Right = m_Default.FindAction("Right", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -200,18 +262,22 @@ public class @PlayerActions : IInputActionCollection, IDisposable
     // Default
     private readonly InputActionMap m_Default;
     private IDefaultActions m_DefaultActionsCallbackInterface;
-    private readonly InputAction m_Default_Horizontal;
-    private readonly InputAction m_Default_Vertical;
     private readonly InputAction m_Default_Birdseye_View;
     private readonly InputAction m_Default_Pause;
+    private readonly InputAction m_Default_Up;
+    private readonly InputAction m_Default_Down;
+    private readonly InputAction m_Default_Left;
+    private readonly InputAction m_Default_Right;
     public struct DefaultActions
     {
         private @PlayerActions m_Wrapper;
         public DefaultActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Horizontal => m_Wrapper.m_Default_Horizontal;
-        public InputAction @Vertical => m_Wrapper.m_Default_Vertical;
         public InputAction @Birdseye_View => m_Wrapper.m_Default_Birdseye_View;
         public InputAction @Pause => m_Wrapper.m_Default_Pause;
+        public InputAction @Up => m_Wrapper.m_Default_Up;
+        public InputAction @Down => m_Wrapper.m_Default_Down;
+        public InputAction @Left => m_Wrapper.m_Default_Left;
+        public InputAction @Right => m_Wrapper.m_Default_Right;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -221,43 +287,57 @@ public class @PlayerActions : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_DefaultActionsCallbackInterface != null)
             {
-                @Horizontal.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnHorizontal;
-                @Horizontal.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnHorizontal;
-                @Horizontal.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnHorizontal;
-                @Vertical.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnVertical;
-                @Vertical.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnVertical;
-                @Vertical.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnVertical;
                 @Birdseye_View.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnBirdseye_View;
                 @Birdseye_View.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnBirdseye_View;
                 @Birdseye_View.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnBirdseye_View;
                 @Pause.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnPause;
+                @Up.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnUp;
+                @Up.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnUp;
+                @Up.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnUp;
+                @Down.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnDown;
+                @Down.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnDown;
+                @Down.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnDown;
+                @Left.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnLeft;
+                @Left.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnLeft;
+                @Left.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnLeft;
+                @Right.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnRight;
+                @Right.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnRight;
+                @Right.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnRight;
             }
             m_Wrapper.m_DefaultActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Horizontal.started += instance.OnHorizontal;
-                @Horizontal.performed += instance.OnHorizontal;
-                @Horizontal.canceled += instance.OnHorizontal;
-                @Vertical.started += instance.OnVertical;
-                @Vertical.performed += instance.OnVertical;
-                @Vertical.canceled += instance.OnVertical;
                 @Birdseye_View.started += instance.OnBirdseye_View;
                 @Birdseye_View.performed += instance.OnBirdseye_View;
                 @Birdseye_View.canceled += instance.OnBirdseye_View;
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @Up.started += instance.OnUp;
+                @Up.performed += instance.OnUp;
+                @Up.canceled += instance.OnUp;
+                @Down.started += instance.OnDown;
+                @Down.performed += instance.OnDown;
+                @Down.canceled += instance.OnDown;
+                @Left.started += instance.OnLeft;
+                @Left.performed += instance.OnLeft;
+                @Left.canceled += instance.OnLeft;
+                @Right.started += instance.OnRight;
+                @Right.performed += instance.OnRight;
+                @Right.canceled += instance.OnRight;
             }
         }
     }
     public DefaultActions @Default => new DefaultActions(this);
     public interface IDefaultActions
     {
-        void OnHorizontal(InputAction.CallbackContext context);
-        void OnVertical(InputAction.CallbackContext context);
         void OnBirdseye_View(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnUp(InputAction.CallbackContext context);
+        void OnDown(InputAction.CallbackContext context);
+        void OnLeft(InputAction.CallbackContext context);
+        void OnRight(InputAction.CallbackContext context);
     }
 }
