@@ -5,6 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CameraControle : MonoBehaviour
 {
+    public bool isStatic;
     public GameObject Target;
     public GameObject VantagePoint;
     public float VantageSize = 10;
@@ -42,6 +43,11 @@ public class CameraControle : MonoBehaviour
     {
         toogle = false;
     }
+    public void m_Birdeye_Toggle()
+    {
+        toogle = !toogle;
+    }
+
 
     private void OnDisable()
     {
@@ -63,6 +69,10 @@ public class CameraControle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isStatic)
+        {
+            return;
+        }
         //float m_Input = Controles.Default.Birdseye_View.ReadValue<float>();
         if (!toogle)
         {

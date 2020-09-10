@@ -29,6 +29,13 @@ public class MenuActions : MonoBehaviour
             Toggle();
         }
     }
+    public void m_Pause()
+    {
+        if (pause_menu)
+        {
+            Toggle();
+        }
+    }
 
     private void OnDisable()
     {

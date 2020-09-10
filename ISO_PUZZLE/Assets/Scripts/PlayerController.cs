@@ -51,6 +51,24 @@ public class PlayerController : MonoBehaviour
         CC.Move(Vector3.forward);
     }
 
+    // Mobile Controles
+    public void m_Right()
+    {
+        CC.Move(Vector3.right);
+    }
+    public void m_Left()
+    {
+        CC.Move(Vector3.left);
+    }
+    public void m_Forward()
+    {
+        CC.Move(Vector3.forward);
+    }
+    public void m_Back()
+    {
+        CC.Move(Vector3.back);
+    }
+
     //private void Move_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     //{
     //    Debug.Log("OBJECT: " + obj.ReadValue<Vector2>().ToString());
@@ -60,19 +78,19 @@ public class PlayerController : MonoBehaviour
     //    //throw new System.NotImplementedException();
     //    if (obj.ReadValue<Vector2>() == Vector2.up)
     //    {
-            
+
     //    }
     //    if (obj.ReadValue<Vector2>() == Vector2.down)
     //    {
-            
+
     //    }
     //    if (obj.ReadValue<Vector2>() == Vector2.left)
     //    {
-            
+
     //    }
     //    if (obj.ReadValue<Vector2>() == Vector2.right)
     //    {
-            
+
     //    }
     //}
 
