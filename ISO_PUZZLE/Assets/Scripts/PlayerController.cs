@@ -33,40 +33,40 @@ public class PlayerController : MonoBehaviour
 
     private void Right_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        CC.Move(Vector3.right);
+        CC.Move(Vector3.right * Time.timeScale);
     }
 
     private void Left_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        CC.Move(Vector3.left);
+        CC.Move(Vector3.left * Time.timeScale);
     }
 
     private void Down_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        CC.Move(Vector3.back);
+        CC.Move(Vector3.back * Time.timeScale);
     }
 
     private void Up_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        CC.Move(Vector3.forward);
+        CC.Move(Vector3.forward * Time.timeScale);
     }
 
     // Mobile Controles
     public void m_Right()
     {
-        CC.Move(Vector3.right);
+        CC.Move(Vector3.right * Time.timeScale);
     }
     public void m_Left()
     {
-        CC.Move(Vector3.left);
+        CC.Move(Vector3.left * Time.timeScale);
     }
     public void m_Forward()
     {
-        CC.Move(Vector3.forward);
+        CC.Move(Vector3.forward * Time.timeScale);
     }
     public void m_Back()
     {
-        CC.Move(Vector3.back);
+        CC.Move(Vector3.back * Time.timeScale);
     }
 
     //private void Move_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)

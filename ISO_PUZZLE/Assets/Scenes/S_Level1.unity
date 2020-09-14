@@ -858,6 +858,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 5601479842391762445, guid: 317e88f4f8f98ba4c9d4af5fc7ce52f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601479842502211361, guid: 317e88f4f8f98ba4c9d4af5fc7ce52f3,
+        type: 3}
+      propertyPath: startMenu
+      value: 
+      objectReference: {fileID: 1355732830}
+    - target: {fileID: 5601479843196028859, guid: 317e88f4f8f98ba4c9d4af5fc7ce52f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6755267738351869614, guid: 317e88f4f8f98ba4c9d4af5fc7ce52f3,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2334,6 +2349,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1355732830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5601479842391762445, guid: 317e88f4f8f98ba4c9d4af5fc7ce52f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 596697948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1373830197
 GameObject:
   m_ObjectHideFlags: 0

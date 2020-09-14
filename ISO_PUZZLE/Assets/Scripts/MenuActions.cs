@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MenuActions : MonoBehaviour
 {
     public GameObject startMenu;
     public bool pause_menu = false;
+
+    public GameObject DefaultSelectedButton;
 
     private GameObject activeMenu;
     private PlayerActions Controles;
@@ -47,6 +50,7 @@ public class MenuActions : MonoBehaviour
     void Start()
     {
         activeMenu = startMenu;
+        EventSystem.current.SetSelectedGameObject(DefaultSelectedButton);
     }
 
     // Update is called once per frame
@@ -63,18 +67,48 @@ public class MenuActions : MonoBehaviour
     }
     public void Toggle()
     {
-        activeMenu.SetActive(!activeMenu.activeSelf);
+        if (!startMenu.activeInHierarchy)
+        {
+            activeMenu.SetActive(true);
+            Time.timeScale = 0;
+
+            // clear selected object
+            EventSystem.current.SetSelectedGameObject(null);
+            // set a new selected object
+            EventSystem.current.SetSelectedGameObject(DefaultSelectedButton);
+        }
+        else
+        {
+            activeMenu.SetActive(false);
+            Time.timeScale = 1;
+        }
+        
     }
     public void SetScene(int Level)
     {
         Debug.Log("Load Scene");
         SceneManager.LoadScene(Level);
+        Time.timeScale = 1;
     }
     public void SetMenu(GameObject menu)
     {
+        // Disable current menu
         activeMenu.SetActive(false);
+        // Set new menu
         activeMenu = menu;
+        // display new menu
         activeMenu.SetActive(true);
+    }
+    public void SetButton(GameObject button)
+    {
+        /* really want some input validation
+         * and some insurance to make sure the button doesnt get de-selected when sswitching from keyboard to controler
+         */
+        // Disable selected button
+        EventSystem.current.SetSelectedGameObject(null);
+        // Set new button
+        DefaultSelectedButton = button;
+        EventSystem.current.SetSelectedGameObject(DefaultSelectedButton);
     }
     public void CloseApp()
     {
