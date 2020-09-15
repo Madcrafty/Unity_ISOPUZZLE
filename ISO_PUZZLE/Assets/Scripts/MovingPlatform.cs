@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public float pauseInterval = 1.0f;
+    public float pauseInterval = 0.5f;
+    public float waitTime = 2.0f; // Time the platform waits when it reaches the end of its path
     public GameObject path;
     public bool loop;
     public bool PlayerActivated;
+
+    public Color ActiveColour;
+    public Color WaitColour;
 
     private Transform[] points;
     private int iter = 0;
@@ -15,6 +19,9 @@ public class MovingPlatform : MonoBehaviour
     private bool active = true;
     private float timer;
     private bool playerOn = false;
+    private bool waiting = false;
+
+    private Renderer renderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +31,7 @@ public class MovingPlatform : MonoBehaviour
             xyz[i] = path.transform.GetChild(i);
         }
         points = xyz;
+        renderer = gameObject.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -34,11 +42,20 @@ public class MovingPlatform : MonoBehaviour
             if (playerOn == true || (iter < points.Length - 1 && iter > 0))
             {
                 // Continue
+                renderer.material.color = ActiveColour;
             }
-            else return;
+            else
+            {
+                renderer.material.color = WaitColour;
+                return;
+            }
         }
         timer += Time.deltaTime;
-        if (timer >= pauseInterval)
+        if (waiting == true && timer >= waitTime)
+        {
+            waiting = false;
+        }
+        if (timer >= pauseInterval && waiting == false)
         {
             timer = 0;
             if (direction == true) iter++;
@@ -47,6 +64,7 @@ public class MovingPlatform : MonoBehaviour
             {
                 if (loop)
                 {
+                    waiting = true;
                     direction = !direction;
                     if (direction == true) iter++;
                     if (direction == false) iter--;
@@ -59,6 +77,14 @@ public class MovingPlatform : MonoBehaviour
 
             }
             if(active) transform.position = points[iter].position;
+        }
+        if (waiting == true)
+        {
+            renderer.material.color = WaitColour;
+        }
+        else
+        {
+            renderer.material.color = ActiveColour;
         }
     }
     private void OnTriggerEnter(Collider other)

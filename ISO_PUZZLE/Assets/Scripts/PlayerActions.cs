@@ -24,7 +24,7 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""id"": ""51df47ea-a7bc-4dc8-bb4b-fd2fc10e1023"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Pause"",
@@ -32,7 +32,7 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""id"": ""d5ce95fc-3a18-4ec6-82b7-8bbed15936f5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Up"",
@@ -40,7 +40,7 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""id"": ""505e4967-9321-4a9c-9083-8dc0511f152c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Down"",
@@ -48,7 +48,7 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""id"": ""ed530042-58c9-4f03-8d9e-cf01ef552500"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Left"",
@@ -56,7 +56,7 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""id"": ""692421ee-b257-43d8-b3ab-8367d6e6f21d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Right"",
@@ -64,7 +64,7 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""id"": ""17554dd8-d904-4210-8f5b-102d476f1609"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -136,6 +136,17 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""ed98cc9a-f491-4ccb-8e48-0a89ac1c5706"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""5ffb2bd2-f032-49a3-ab9a-987fbb312ac6"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
@@ -149,6 +160,17 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""0c03d662-4d89-4865-ac7e-befafc0078e7"",
                     ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c342fe97-b973-44c3-b80f-1dd4ec006983"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -180,6 +202,17 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""8bf6d32d-3cef-437b-80a6-edb31e0bd560"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""601b739b-b99a-497e-8b2a-c53a62fe4a10"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
@@ -193,6 +226,17 @@ public class @PlayerActions : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""9cc4eaa7-c458-4447-a1bd-5bf695ad5f4c"",
                     ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aa975451-20df-4683-8000-921a52d56c91"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
