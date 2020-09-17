@@ -1,0 +1,167 @@
+commit a7da91bb33d03b7003c2e78d1e5a200fc409303c
+Author: Madcrafty <madcrafty@icloud.com>
+Date:   Wed Sep 16 21:03:53 2020 -0700
+
+    added installer
+
+commit 851b15ae07d131fe212b329e576c7e536d190092
+Author: Ruben <madcrafty@icloud.com>
+Date:   Thu Sep 17 11:16:57 2020 +1000
+
+    builds
+
+commit 08770c28ed9924eedea71381add8926d44c12abf
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Wed Sep 16 23:00:55 2020 +1000
+
+    start on documentation
+
+commit e54f928111c14ef6295a15c80ccd34adb84755e0
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Wed Sep 16 10:02:03 2020 +1000
+
+    fixed inverted menu controles for web
+
+commit 554b5cb261d23b67d74b14138452b38860414f81
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Wed Sep 16 09:46:28 2020 +1000
+
+    fixed last fix
+
+commit 42e3f078a9f2aff275c1163b2dcb88bccb9c19e2
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Wed Sep 16 09:32:41 2020 +1000
+
+    fixed inverted controller controles for web
+
+commit 084e2cf59d759346f13dec92ae0b6577d4c25e81
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Tue Sep 15 22:30:01 2020 +1000
+
+    testing inverted vertical controls for web
+
+commit 90ee79589e76325042cca96bb3e4f8c9fd3637f8
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Tue Sep 15 19:06:10 2020 +1000
+
+    Web build
+
+commit 44df62f45b75765b4273070e0770836895068769
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Tue Sep 15 18:53:45 2020 +1000
+
+    removed Web build
+
+commit 87b0d17eaa2471d0c40354c4ecb9571e86e03d21
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Tue Sep 15 18:39:11 2020 +1000
+
+    Web Build add and set-up github pages
+
+commit 24fd63eca96b47e91001ee0fe7c177d83128d46e
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Tue Sep 15 14:45:04 2020 +1000
+
+    improved controles, platforms change colours depending on if they are moving
+
+commit 7474846182df7993043df702c5710ee62e78b5f6
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Mon Sep 14 22:18:55 2020 +1000
+
+    menu works with controler now (a little wierd when swicthing from KB to Controler)
+
+commit 9b2da940c339dd4990bc0db0e0215cf615a2176a
+Author: Ruben <madcrafty@icloud.com>
+Date:   Fri Sep 11 16:55:17 2020 +1000
+
+    fixed menu with scaling buttons and backdrop, made moving platforms have blue colour
+
+commit a67587941933b302a99977a12a50bf5bd1913b77
+Author: Ruben <madcrafty@icloud.com>
+Date:   Fri Sep 11 11:42:28 2020 +1000
+
+    fixed level 6 to have a more consistant solution
+
+commit 03a8f3d41548e2ac79ac6a7febae6c0a9d2c1bbf
+Author: Ruben <madcrafty@icloud.com>
+Date:   Fri Sep 11 10:30:58 2020 +1000
+
+    Made aesthetic changes to the main menu
+
+commit 77111f4d1d7f7ccd33bb918fe29f3b5e88024f04
+Author: Ruben <madcrafty@icloud.com>
+Date:   Thu Sep 10 16:55:09 2020 +1000
+
+    mobile functionality, fixed minor issue with exit door, added stage to main menu
+
+commit 4308db202ec8b9bafc3f1c026fbc0b50a8d0c258
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Wed Sep 9 22:30:04 2020 +1000
+
+    fixed camera
+
+commit ae7e350f709a3fe494b6418d062ddf85c795f837
+Author: Ruben <madcrafty@icloud.com>
+Date:   Wed Sep 9 17:01:30 2020 +1000
+
+    Input mannager and post procesing fixed; added controler support
+
+commit 342842d2ba318d735ee21397fec328f9c15cd0e4
+Author: Ruben <madcrafty@icloud.com>
+Date:   Wed Sep 9 10:56:23 2020 +1000
+
+    Fixed Post processing package issues
+
+commit c013211a92025c0981ad829979f23b53362dde70
+Author: Ruben <madcrafty@icloud.com>
+Date:   Wed Sep 9 10:11:09 2020 +1000
+
+    deleting files that should have been ignored
+
+commit 22b63ee9adfe77a34f5f98d1a36198692e24d498
+Author: Ruben <madcrafty@icloud.com>
+Date:   Wed Sep 9 10:09:13 2020 +1000
+
+    updated gitignore file
+
+commit 5d2a4c54b823eed8023b552345e89ee235460ff7
+Author: Ruben <madcrafty@icloud.com>
+Date:   Wed Sep 9 09:51:41 2020 +1000
+
+    Checking
+
+commit a01743b6195632059e2063ead7f9dd7014e865ea
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Tue Sep 8 14:19:06 2020 +1000
+
+    Camera Lerp works with any movement and added Birds eye view mode with m, remodled level slelect menu, Improved Exit script with next level toggle, Added player activation toggle to moving platforms
+
+commit 6738587c294c828610036214436211dc75a842de
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Mon Sep 7 20:43:53 2020 +1000
+
+    Made some new levels, texturing on presure plates and a follow camera script
+
+commit 0f512e4d0e1ca6faf32013373f382b3503cdb40d
+Author: Madcrafty <rantao877@gmail.com>
+Date:   Thu Sep 3 17:03:32 2020 +1000
+
+    added menu system, added URP
+
+commit ddc1fe1615f5b3870ef839fbf9b3920c92ba7046
+Author: Madcrafty <rantao877@gmail.com>
+Date:   Fri Aug 28 16:54:43 2020 +1000
+
+    Made some new levels with moving platforms
+
+commit d8096755a98188d1477a09535402a64629e09224
+Author: Madcrafty <rantao877@gmail.com>
+Date:   Thu Aug 27 16:49:34 2020 +1000
+
+    Simple demo project
+
+commit 71d5845e34a0501dffe8601c2506ba8d26660acf
+Author: Madcrafty <53935032+Madcrafty@users.noreply.github.com>
+Date:   Thu Aug 27 16:46:16 2020 +1000
+
+    Initial commit
