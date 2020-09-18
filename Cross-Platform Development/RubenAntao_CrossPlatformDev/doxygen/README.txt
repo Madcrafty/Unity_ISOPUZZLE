@@ -1,0 +1,1 @@
+go into the html folder and open the file "index.html"
